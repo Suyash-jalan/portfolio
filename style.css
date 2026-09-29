@@ -697,7 +697,7 @@
             color: rgba(245, 240, 230, 0.65);
             margin-bottom: 2rem;
         }
-        .project-links { display: flex; gap: 1rem; }
+        .project-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
         .project-link {
             color: var(--cream);
             text-decoration: none;
@@ -710,6 +710,26 @@
             cursor: none;
         }
         .project-link:hover { color: var(--gold); gap: 0.75rem; }
+        .project-link.live-link {
+            color: #4ade80;
+            font-weight: 600;
+        }
+        .project-link.live-link:hover {
+            color: #86efac;
+        }
+        .live-status-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #4ade80;
+            animation: livePulse 2s ease-in-out infinite;
+        }
+        @keyframes livePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.35); opacity: 0.45; }
+        }
         .project-highlights {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
